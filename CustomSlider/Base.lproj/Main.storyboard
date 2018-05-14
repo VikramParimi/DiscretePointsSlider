@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sL2-tw-I4h">
+                                <rect key="frame" x="20" y="318.5" width="335" height="31"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="V52-fY-U31" customClass="DisceretePointSlider" customModule="CustomSlider" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="0.0" width="299" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.29411764705882354" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="V52-fY-U31" secondAttribute="trailing" constant="20" id="DmM-0N-pBV"/>
+                                    <constraint firstItem="V52-fY-U31" firstAttribute="centerX" secondItem="sL2-tw-I4h" secondAttribute="centerX" id="MtP-Qb-Gp8"/>
+                                    <constraint firstAttribute="height" constant="31" id="P6S-Um-fZj"/>
+                                    <constraint firstItem="V52-fY-U31" firstAttribute="leading" secondItem="sL2-tw-I4h" secondAttribute="leading" constant="20" id="ngc-Yr-y6I"/>
+                                    <constraint firstItem="V52-fY-U31" firstAttribute="centerY" secondItem="sL2-tw-I4h" secondAttribute="centerY" id="vSG-qW-ba9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="10.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-YH-Fbb" customClass="PointSliderView" customModule="CustomSlider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="536" width="335" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="N0d-ST-8W6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gFR-YH-Fbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70l-Us-V4n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gFR-YH-Fbb" secondAttribute="bottom" constant="100" id="BE9-A5-8ho"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sL2-tw-I4h" secondAttribute="trailing" constant="20" id="Hqq-ck-vc8"/>
+                            <constraint firstAttribute="trailing" secondItem="gFR-YH-Fbb" secondAttribute="trailing" constant="20" id="OLf-Ho-me9"/>
+                            <constraint firstItem="sL2-tw-I4h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wya-Sq-wLb"/>
+                            <constraint firstItem="sL2-tw-I4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gqS-1F-qJM"/>
+                            <constraint firstItem="sL2-tw-I4h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ijR-4Q-uUO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pointSliderView" destination="gFR-YH-Fbb" id="3Sp-eP-4JF"/>
+                        <outlet property="slider" destination="V52-fY-U31" id="v7L-gK-LEM"/>
+                        <outlet property="sliderView" destination="sL2-tw-I4h" id="ghY-lG-pCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>

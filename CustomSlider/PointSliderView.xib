@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointSliderView" customModule="CustomSlider" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="k2b-mJ-jyC" id="Ped-It-Drn"/>
+                <outlet property="slider" destination="eii-Pd-dmm" id="lYd-kq-Bou"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="k2b-mJ-jyC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eii-Pd-dmm" customClass="PointSlider" customModule="CustomSlider" customModuleProvider="target">
+                    <rect key="frame" x="18" y="318.5" width="339" height="31"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1f0-4G-OSX" firstAttribute="trailing" secondItem="eii-Pd-dmm" secondAttribute="trailing" constant="20" id="FxP-0I-kCY"/>
+                <constraint firstItem="eii-Pd-dmm" firstAttribute="leading" secondItem="1f0-4G-OSX" secondAttribute="leading" constant="20" id="Gkh-nq-e8H"/>
+                <constraint firstItem="eii-Pd-dmm" firstAttribute="centerY" secondItem="k2b-mJ-jyC" secondAttribute="centerY" id="Ihw-j0-mb4"/>
+                <constraint firstItem="eii-Pd-dmm" firstAttribute="centerX" secondItem="k2b-mJ-jyC" secondAttribute="centerX" id="KwH-8m-gHe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="1f0-4G-OSX"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10.5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="54" y="4"/>
+        </view>
+    </objects>
+</document>
